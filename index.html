@@ -1,7 +1,450 @@
-<html>
-  <center>
-    <font color="5" color="red">
-     mosca is the best programmer    
-  </font> 
-      </center>
-      </html>
+<!doctype html>
+<html lang="en">
+<head>
+<title>AppCreator24.com</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="./style_intra.css?v=8">
+<link rel="stylesheet" href="../jquery-ui-1.8.20.custom.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="../jquery-1.7.2.min.js"></script>
+<script src="../jquery-ui-1.8.20.custom.min.js"></script>
+<script src="./izzyColor.js?v=2"></script>
+<script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="./ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBPfiWZTegCSQkUF5aKGH42ZbLh8z0-Q54&sensor=false&language=en"></script>
+<script language="javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function fidioma()
+{
+	self.location="./intra.php?idioma="+document.getElementById("sel_idioma").value+"&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8";
+}
+function falert(cad)
+{
+	document.getElementById("modaltxt").innerHTML=cad;
+	document.getElementById('divmodal').style.display="block";
+}
+function fconfirm(cad,f,p)
+{
+	document.getElementById("modaltxtconfirm").innerHTML=cad;
+	$("#btnmodalok").prop('onclick',null).off('click');	$("#btnmodalok").click(function() {
+		$('#divmodalconfirm').hide();
+				if(f.indexOf('@')!=-1)
+		{
+			f=f.split("@");
+			if(f.length==3){self.frames[f[0]][f[1]][f[2]](p);}
+			else if(f.length==2){self.frames[f[0]][f[1]](p);};
+		}
+		else
+		{
+    		window[f](p);
+    	};
+  	});
+	document.getElementById('divmodalconfirm').style.display="block";
+}
+
+
+</script>
+</head>
+<body style="margin:0px;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td style="background-color:#333333;height:10px;"></td>
+</tr>
+</table>
+
+<header>
+<table width="100%">
+<tr>
+<td>
+			<table>
+		<tr>
+		<td><img src="https://www.appcreator24.com/android-app-creator/android-creator.png" width="346" height="70" style="vertical-align:bottom;"></td>
+		<td width="10"></td>
+		<td style="font-family:Verdana;color:#666666;font-weight:bold;font-size:18px;font-style:italic;">Make your app for Android<br>phones and tablets</td>
+		</tr>
+		</table>
+	</td>
+	<td valign="bottom" align="right" style="font-family:Verdana;"><select name="sel_idioma" onchange="fidioma();" id="sel_idioma">
+	<option value="en" selected>English</option>
+	<option value="es">Spanish</option>
+	</select></td>
+</tr>
+	<tr>
+	<td colspan="2" style="background-color:#eeeeee;">
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td align="center">
+		    <table class="boton_menu" style="background-color:#A4C639;" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=2';">
+		    <tr>
+		    <td>Applications</td>
+		    </tr>
+		    </table>
+		</td>
+		<td style="width:1px"></td>
+		<td align="center">
+		    <table class="boton_menu" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=3';">
+		    <tr>
+		    <td>Your details</td>
+		    </tr>
+		    </table>
+		</td>
+					<td style="width:1px"></td>
+			<td align="center">
+			    <table class="boton_menu" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=4';">
+			    <tr>
+			    <td>Adfree service</td>
+			    </tr>
+			    </table>
+			</td>
+				<td style="width:1px"></td>
+		<td align="center">
+		    <table class="boton_menu" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=5';">
+		    <tr>
+		    <td>Support</td>
+		    </tr>
+		    </table>
+		</td>
+		<td style="width:1px"></td>
+		<td align="center">
+		    <table class="boton_menu" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=8';">
+		    <tr>
+		    <td>Subclients</td>
+		    </tr>
+		    </table>
+		</td>
+
+		<td style="width:1px"></td>
+		<td align="center">
+		    <table class="boton_menu" cellpadding="7" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=91';">
+		    <tr>
+		    <td>Referral program</td>
+		    </tr>
+		    </table>
+		</td>
+
+			
+		<td style="width:20px;"></td>
+		<td style="font-family:arial;cursor:pointer;" onclick="self.location='./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=10';"><span style='font-style:oblique'>New features</span></td>
+		<td style="width:40px;"></td>
+		<td><a href="./logout.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8"><img src="https://www.appcreator24.com/android-app-creator/logout.png" width="24" height="24" style="border:0px;position:relative;top:2px;"></a></td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+</table>
+</header>
+
+<div id="divmodal" class="modal" style="display:none;" onclick="this.style.display='none';document.getElementById('divmodalcontent').style.marginTop='15%';">  <div id="divmodalcontent" class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modaltxt"></p>
+  </div>
+</div>
+
+<div id="divmodalconfirm" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p id="modaltxtconfirm"></p>
+    <button class="guardar" id="btnmodalok">OK</button>
+    <button class="cancelar" style="margin-left:10px;" onclick="$('#divmodalconfirm').hide();">Cancel</button>
+  </div>
+</div>
+
+
+
+<script src="./autolinker.min.js"></script>
+
+<script language="javascript">
+var sec_sel="";
+
+
+$(document).ready(function(){
+			$("#gen").click(function() {fsel("gen");});
+			$("#gen_nombre").click(function(){abrir_fr("./app_gen_nombre.php","gen_nombre");});			$("#gen_gen").click(function(){abrir("./app_gen_gen.php","gen_gen");});						$("#gen_compartir").click(function(){abrir("./app_gen_compartir.php","gen_compartir");});			$("#gen_bv").click(function(){abrir("./app_gen_bv.php","gen_bv");});			$("#gen_rate").click(function(){abrir("./app_gen_rate.php","gen_rate");});						      
+			$("#gen_dis").click(function() {fsel("gen_dis");});
+			$("#gen_icohome").click(function(){abrir_fr("./app_gen_icohome.php","gen_icohome");});
+			$("#gen_iconos").click(function(){abrir("./app_gen_iconos.php","gen_iconos");});
+			$("#gen_splash").click(function(){abrir_fr("./app_gen_splash.php","gen_splash");});
+			$("#gen_menu").click(function(){abrir_fr("./app_gen_menu.php","gen_menu");});
+			$("#gen_menub").click(function(){abrir_fr("./app_gen_menub.php","gen_menub");});
+			$("#gen_colores").click(function(){abrir("./app_gen_colores.php","gen_colores");});
+			$("#gen_fuente").click(function(){abrir("./app_gen_fuente.php","gen_fuente");});
+			$("#gen_sound").click(function(){abrir("./app_gen_sound.php","gen_sound");});
+			$("#gen_fondo").click(function(){abrir_fr("./app_gen_fondo.php","gen_fondo");});
+	
+			$("#sec").click(function() {abrir("./app_sec_lista.php","sec");});
+		
+			$("#loc").click(function() {fsel("loc");});
+			$("#loc_lista").click(function() {abrir("./app_loc_lista.php","loc_lista");});			$("#loc_opciones").click(function() {abrir("./app_loc_opciones.php","loc_opciones");});			$("#loc_colores").click(function() {abrir("./app_loc_colores.php","loc_colores");});	
+			$("#prod").click(function() {fsel("prod");});
+							$("#prod_lista").click(function() {abrir("./app_prod_lista.php","prod_lista");});
+							$("#prod_cats").click(function() {abrir("./app_prod_cats.php","prod_cats");});
+							$("#prod_opciones").click(function() {abrir("./app_prod_opciones.php","prod_opciones");});
+							$("#prod_colores").click(function() {abrir("./app_prod_colores.php","prod_colores");});
+				
+			$("#mensajes").click(function() {abrir("./app_envios_lista.php","mensajes");});
+		
+			$("#convs").click(function() {abrir("./app_conv_lista.php","convs");});
+		
+				$("#publi").click(function() {abrir("./app_publi.php","publi_admob");});
+		
+			$("#estads").click(function() {abrir("./app_estads.php","estads");});
+	
+	
+	$(function() {
+	    $(".boton_menu_v").hover(
+	    function() {
+	        $(this).css('background-color', '#eeeeee')
+	    }, function() {
+	    	if(this.id!=sec_sel){$(this).css('background-color', '');}
+	    });
+	});
+
+});
+
+function fsel(id) {
+if($("#"+id+"_txt").is(":visible"))
+{
+  	$("#f_"+id+"_nosel").show();
+  	$("#f_"+id+"_sel").hide();
+  	$("#"+id+"_txt").hide();
+}
+else
+{
+  	$("#f_"+id+"_nosel").hide();
+  	$("#f_"+id+"_sel").show();
+  	$("#"+id+"_txt").show();
+  }
+};
+
+function abrir(cad,idbtn)
+{
+	if(typeof idbtn!=="undefined")
+	{
+		sec_sel=idbtn;
+		$(".boton_menu_v").css('background-color', '#ffffff');
+		$("#"+idbtn).css('background-color', '#eeeeee');
+	}
+	var u=cad;
+	if(u.indexOf("?")==-1){u+="?";};
+	u+="&idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&idapp=1628195&ts="+(new Date().getTime());
+	//self.open(u);
+	$.get(u,function(result){fresult(result);});
+}
+function abrir_fr(cad,idbtn)
+{
+	if(typeof idbtn!=="undefined")
+	{
+		sec_sel=idbtn;
+		$(".boton_menu_v").css('background-color', '#ffffff');
+		$("#"+idbtn).css('background-color', '#eeeeee');
+	}
+	var u=cad;
+	if(u.indexOf("?")==-1){u+="?";};
+	u+="&idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&idapp=1628195&ts="+(new Date().getTime());
+		var inst=CKEDITOR.instances["editor1"];
+	if(inst){try{inst.destroy();}catch(err){};};
+	$("#cont").html("<iframe name='ifrprinc' id='ifrprinc' frameborder='0' src='"+u+"' width='800'></iframe>");
+}
+
+function fresult(result)
+{
+	if(result.indexOf("-SESIONKO-")!=-1)
+	{
+		self.location="../android-creator.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=1";
+	}
+	else
+	{
+				var inst=CKEDITOR.instances["editor1"];
+		if(inst){try{inst.destroy();}catch(err){};};
+		$("#cont").html(result);
+		window.scroll(0,0);
+	}
+}
+
+function fcerrarconsejos(modo)
+{
+	if(modo==1)
+	{
+		$("#tconsejos").hide();
+		$("#tconsejosundo").show();
+	}
+	else if(modo==0)
+	{
+		$("#tconsejosundo").hide();
+		$("#tconsejos").show();
+	}
+	$.get("./consejos_ocultar.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&modo="+modo+"&ts="+(new Date().getTime()));
+}
+</script>
+
+<table class="titulo_sec">
+<tr>
+<td><a href="./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=2" style="text-decoration:none;color:#999999;">Applications</a> &gt; &#83;&#104;&#111;&#111;&#102;&#32;&#45;&#32;&#1588;&#1608;&#1601;</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td style="vertical-align:top;">
+	<table class="menu_v" cellspacing="0" cellpadding="3">
+	
+			<tr id="gen" style="cursor:pointer;">
+		<td><div id="f_gen_nosel"><img src="https://www.appcreator24.com/android-app-creator/desplegable.gif" border="0" width="12" height="12"></div><div id="f_gen_sel" style="display:none;"><img src="https://www.appcreator24.com/android-app-creator/desplegado.gif" border="0" width="12" height="12"></div></td>
+		<td>General info</td>
+		</tr>
+		<tr id="gen_txt" style="display:none">
+		<td></td>
+		<td>
+		    <table border="0" width="100%" cellspacing="0" cellpadding="2">
+			<tr id="gen_nombre" class="boton_menu_v"><td></td><td>Name and icon</td></tr>			<tr id="gen_gen" class="boton_menu_v"><td></td><td>General</td></tr>						<tr id="gen_compartir" class="boton_menu_v"><td></td><td>Share</td></tr>			<tr id="gen_bv" class="boton_menu_v"><td></td><td>Launch message</td></tr>			<tr id="gen_rate" class="boton_menu_v"><td></td><td>Rate app</td></tr>									</table>
+		</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+			<tr id="gen_dis" style="cursor:pointer">
+		<td><div id="f_gen_dis_nosel"><img src="https://www.appcreator24.com/android-app-creator/desplegable.gif" border="0" width="12" height="12"></div><div id="f_gen_dis_sel" style="display:none;"><img src="https://www.appcreator24.com/android-app-creator/desplegado.gif" border="0" width="12" height="12"></div></td>
+		<td>Design</td>
+		</tr>
+		<tr id="gen_dis_txt" style="display:none">
+		<td></td>
+		<td>
+		    <table border="0" width="100%" cellspacing="0" cellpadding="2">
+			<tr id="gen_colores" class="boton_menu_v"><td>Colors</td></tr>
+			<tr id="gen_fuente" class="boton_menu_v"><td>Font</td></tr>
+			<tr id="gen_sound" class="boton_menu_v"><td>Chats sounds</td></tr>
+			<tr id="gen_menu" class="boton_menu_v"><td>Menu type</td></tr>
+			<tr id="gen_menub" class="boton_menu_v"><td>Bottom menu</td></tr>
+			<tr id="gen_icohome" class="boton_menu_v"><td>Main icon</td></tr>
+			<tr id="gen_iconos" class="boton_menu_v"><td>Top bar icons</td></tr>
+			<tr id="gen_splash" class="boton_menu_v"><td>Loading image</td></tr>
+			<tr id="gen_fondo" class="boton_menu_v"><td>Background img</td></tr>
+			</table>
+		</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+			<tr id="sec" class="boton_menu_v">
+		<td></td>
+		<td>Sections</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+			<tr id="loc" style="cursor:pointer;">
+		<td><div id="f_loc_nosel"><img src="https://www.appcreator24.com/android-app-creator/desplegable.gif" border="0" width="12" height="12"></div><div id="f_loc_sel" style="display:none;"><img src="https://www.appcreator24.com/android-app-creator/desplegado.gif" border="0" width="12" height="12"></div></td>
+		<td>Offices</td>
+		</tr>
+		<tr id="loc_txt" style="display:none">
+		<td></td>
+		<td>
+		    <table border="0" width="100%" cellspacing="0" cellpadding="2">
+			<tr id="loc_lista" class="boton_menu_v"><td>List</td></tr>			<tr id="loc_opciones" class="boton_menu_v"><td>Options</td></tr>			<tr id="loc_colores" class="boton_menu_v"><td>Colors</td></tr>			<tr id="convs" class="boton_menu_v"><td>Conversations</td></tr>			</table>
+		</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+			<tr id="prod" style="cursor:pointer;">
+		<td><div id="f_prod_nosel"><img src="https://www.appcreator24.com/android-app-creator/desplegable.gif" border="0" width="12" height="12"></div><div id="f_prod_sel" style="display:none;"><img src="https://www.appcreator24.com/android-app-creator/desplegado.gif" border="0" width="12" height="12"></div></td>
+		<td>Products</td>
+		</tr>
+		<tr id="prod_txt" style="display:none">
+		<td></td>
+		<td>
+		    <table border="0" width="100%" cellspacing="0" cellpadding="2">
+							<tr id="prod_lista" class="boton_menu_v"><td>Management</td></tr>
+							<tr id="prod_cats" class="boton_menu_v"><td>Categories</td></tr>
+							<tr id="prod_opciones" class="boton_menu_v"><td>Options</td></tr>
+							<tr id="prod_colores" class="boton_menu_v"><td>Colors</td></tr>
+						</table>
+		</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+		
+			<tr id="mensajes" class="boton_menu_v">
+		<td></td>
+		<td>Send notifications</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+				<tr id="publi" class="boton_menu_v">
+			<td></td>
+			<td>Ads</td>
+			</tr>
+			<tr><td colspan="2" class="sep_h"></td></tr>
+		
+			<tr id="estads" class="boton_menu_v">
+		<td></td>
+		<td>Statistics</td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+	
+			<tr id="download" class="boton_menu_v">
+		<td></td>
+		<td><a href="../app1628195" target="_blank" style="text-decoration:none;color:#000000;">Download App&nbsp;<i class="fa fa-download" style="color:#718927" aria-hidden="true"></i></a></td>
+		</tr>
+		<tr><td colspan="2" class="sep_h"></td></tr>
+	
+	</table>
+	
+			<table align="center" style="border:0px;margin-top:10px;">
+		<tr><td><a href="http://www.appcreator24.com/make-money/" target="_blank"><img src="https://www.appcreator24.com/android-app-creator/how-create-apps-make-money_p.gif" style="border:0px;" width="128" height="101"></a></td></tr>
+		</table>
+		<table align="center" style="border:0px;margin-top:5px;">
+		<tr><td><a href="./intra.php?idioma=en&idsesion=5r3wejidml07oyn2gx9s6bzqtvuchkpa41f8&pag=9"><img src="https://www.appcreator24.com/android-app-creator/consejosgp_en.jpg" style="border:0px;" width="128" height="50"></a></td></tr>
+		</table>
+	</td>
+<td class="sep_v"></td>
+<td style="vertical-align:top;">
+	<div id="cont">
+			<span style="color:#494949;font-family:arial;">&lt;&lt;&nbsp;Select an option</span>
+		<table id="tconsejos" class="gnow" style="margin-top:20px;width:400px;">
+		<tr>
+		<td class="gnow_tit">Tips</td>
+		<td style="font-size:x-small;text-align:right;"><a style="color:#333333;" href="javascript:var v=fcerrarconsejos(1);">Don't show again</a></td>
+		</tr>
+		<tr><td colspan="2" style="height:5px;"></td></tr>
+		<tr><td colspan="2" class="gnow_subtit">Customize sections and design</td></tr>
+		<tr><td colspan="2">From 'Sections' create and manage sections of the app. Choose colors for each section or select a global style from 'Design'. You can also select the menu type.</td></tr>
+		<tr><td colspan="2" style="height:10px;"></td></tr>
+		<tr><td colspan="2" class="gnow_subtit">Put the app on your website or blog</td></tr>
+		<tr><td colspan="2">If you have a website, give to it added value by putting a link to your app. From the section 'Download app' you can get the link to put on your website.</td></tr>
+		<tr><td colspan="2" style="height:10px;"></td></tr>
+		<tr><td colspan="2" class="gnow_subtit">Take advantage of sending messages(notifications)</td></tr>
+		<tr><td colspan="2">From 'Send notifications' you can send messages directly to devices of all your users. This allows you to send news, promotions, etc.. immediately.</td></tr>
+		<tr><td colspan="2" style="height:10px;"></td></tr>
+		<tr><td colspan="2" class="gnow_subtit">Publish your app on Google Play</td></tr>
+		<tr><td colspan="2">To obtain a high number of users, once your app is complete, publish it on Google Play.</td></tr>
+		<tr><td colspan="2" style="height:10px;"></td></tr>
+		</table>
+		<table id="tconsejosundo" class="gnow" style="display:none;margin-top:20px;">
+		<tr>
+		<td style="font-size:x-small;"><a style="color:#333333;" href="javascript:var v=fcerrarconsejos(0);">Undo</a></td>
+		<td><img src="https://www.appcreator24.com/android-app-creator/deshacer.png" style="border:0px;width:13px;height:12px;"></td>
+		</tr>
+		</table>
+		</div>
+</td>
+</tr>
+</table>
+<footer>
+<div class="pie">
+<table style="border-width:0px;">
+<tr>
+<td><img src="https://www.appcreator24.com/android-app-creator/html5.png" style="border:0px;" width="64" height="64"></td>
+	<td>2021 AppCreator24.com | <span style="color:#000000;">Vinebre</span><span style="color:#cc3333">Software</span></td>
+</tr>
+</table>
+</div>
+</footer>
+</body>
+</html>
